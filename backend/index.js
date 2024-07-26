@@ -33,7 +33,7 @@ const db = mysql.createPool({
 //   host: 'localhost',
 //   user: 'root',
 //   password: '',
-//   database: 'TechnicalSupport',
+//   database: 'sql12721250',
 // });
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
@@ -325,10 +325,10 @@ app.post("/loginDoctor", (req, res) => {
 });
 
 app.post('/test', (req, res) => {
-  const { device, image, report ,username} = req.body;
+  const { device, image, report ,username,Department} = req.body;
 
-  const sql = "INSERT INTO test (images, nameimages, textarea,namedoctor) VALUES (?, ?, ?,?)";
-  db.query(sql, [image, device, report,username], (err, result) => {
+  const sql = "INSERT INTO reporting (images, nameimages, textarea,namedoctor,Department) VALUES (?, ?, ?,?,?)";
+  db.query(sql, [image, device, report,username,Department], (err, result) => {
     if (err) {
       console.error('Error inserting data:', err);
       res.status(500).json({ message: 'Error inserting data', error: err.message }); // عرض تفاصيل الخطأ
@@ -340,7 +340,7 @@ app.post('/test', (req, res) => {
 
 
 app.get('/services',(req,res)=>{
-  const sql = "SELECT *  FROM test";
+  const sql = "SELECT *  FROM reporting";
   db.query(sql,(err,data)=>{
       if(err) return res.json(err);
       return res.json(data);
@@ -348,7 +348,7 @@ app.get('/services',(req,res)=>{
 })
 app.delete("/removetest/:id",(req,res)=>{
   const id  = req.params.id;
-  const sql = "DELETE FROM test WHERE id = ?"
+  const sql = "DELETE FROM reporting WHERE id = ?"
  
   db.query(sql,[id],(err,data)=>{
       if(err) return res.json({Message :"error in Node"})

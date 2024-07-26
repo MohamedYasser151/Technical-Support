@@ -20,6 +20,8 @@ import './App.css';
 const Home = lazy(()=> import('./component/Home.js'))
 const Click = lazy(()=> import('./component/click.js'))
 const IT = lazy(()=> import('./component/it/Employee.js'))
+const  Chatbot = lazy(()=> import('./component/chatbot/chat.js'))
+const  Pages = lazy(()=> import('./component/page.js'))
 
 
 
@@ -39,7 +41,7 @@ const App = ()=>{
       
         {/* <Route path="/" element={<Signup/>}/> */}
         <Route path="/SignupUser" element={<Signup/>}/>
-        <Route path="/" element={<Signin/>}/>
+        {/* <Route path="/" element={<Signin/>}/> */}
         <Route path="/signin" element={<Signin/>}/>
 
          <Route path="*" element={
@@ -49,9 +51,30 @@ const App = ()=>{
          </div>
          }/>
           
-        
+         {/* chatbot */}
+         <Route path="/chatbot" element={
+          <React.Suspense fallback={<Loading/>}>
+        <div>
+         <Navbars   />
+        <Chatbot />
+        {/* <Footer/fu */}
+        </div>
+        </React.Suspense>
+        } />
 
           {/* Home */}
+          <Route path="/" element={
+            <React.Suspense fallback={<Loading/>}>
+            <div>
+          {/* <Navbars /> */}
+                    
+           < Pages />
+          
+          
+          {/* <Footer/> */}
+          </div>
+          </React.Suspense>
+        }/>
           <Route path="/home" element={
             <React.Suspense fallback={<Loading/>}>
             <div>
@@ -65,7 +88,7 @@ const App = ()=>{
           </React.Suspense>
         }/>
 
-          <Route path="/click" element={
+          <Route path="/Reports" element={
             <React.Suspense fallback={<Loading/>}>
             <div>
           <Navbars />

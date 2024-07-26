@@ -35,14 +35,14 @@ function Home() {
   },[])
  
 
-  useEffect(() => {
+  // useEffect(() => {
   
-    const login = Cookies.get('login');
-    if (login !== 'true') {
+  //   const login = Cookies.get('login');
+  //   if (login !== 'true') {
       
-      navigate('/signin');
-    }
-  }, [navigate]);
+  //     navigate('/signin');
+  //   }
+  // }, [navigate]);
   return (
     <div>
     <div className={styless.bodyy}>
@@ -60,7 +60,10 @@ function Home() {
         modules={[Autoplay, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide><img src={img} alt="" className='imagess'/></SwiperSlide>
+        <SwiperSlide><img src={img} alt="" className='imagess'/>
+        {/* <p></p> */}
+        
+        </SwiperSlide>
         <SwiperSlide><img src={img2} alt="" className='imagess'/></SwiperSlide>
         <SwiperSlide><img src={img3} alt="" className='imagess'/></SwiperSlide>
         

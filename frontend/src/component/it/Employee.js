@@ -42,7 +42,7 @@ function Employee() {
   const onHide = () => setModalShow(false);
 
   useEffect(() => {
-    fetch('http://localhost:8083/services')
+    fetch('technical-support-seven.vercel.app/services')
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data)) {
@@ -103,6 +103,7 @@ function Employee() {
             <thead>
               <tr>
                 <th>id</th>
+                <th>Department</th>
                 <th>Device type</th>
                 <th>Device image</th>
                 <th>Reports</th>
@@ -118,6 +119,7 @@ function Employee() {
                   {groupedData[namedoctor].map(item => (
                     <tr key={item.id}>
                       <td>{item.id}</td>
+                      <td>{item.Department}</td>
                       <td>{item.nameimages}</td>
                       <td><img src={item.images} alt="Device" className={styleess.image} /></td>
                       <td>

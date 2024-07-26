@@ -5,18 +5,28 @@
   background-repeat: no-repeat;
 }
 .arddds {
+  width: 80%;
     position: relative;
     backdrop-filter: blur(8px);
     border-radius: 30px;
   }
+  .flexx{
+    display: flex;
+    
+  }
+
   
   .dropdown {
     position: relative;
     display: inline-block;
+    margin-left:20px;
+    margin: 10px;
   }
   
   .dropbtn {
-    background-color: #4CAF50;
+    width: 200px;
+    height: 100px;
+    background-color: #f8af05;
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -24,6 +34,10 @@
     cursor: pointer;
     display: flex;
     align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    border-radius: 20px;
+
   }
   
   .dropdownContent {
@@ -53,11 +67,13 @@
   }
   
   .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
+    background-color: #e6a100;
+
   }
   .btn{
-    background-color: rgb(7, 145, 237);
-    width: 90%;
+    background-color: rgb(235, 177, 17);
+    width: 30%;
+    margin: 10px;
     border: none;
     color: #ffff;
     border-radius: 10px;

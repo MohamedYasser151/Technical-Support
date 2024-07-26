@@ -33,7 +33,7 @@ function Signin() {
         Cookies.set('login', true, { expires: 7 * 24 });
         Cookies.set('username', formData.username, { expires: 7 * 24 });
         setLogin(true);
-        navigate("/home");
+        navigate("/Reports");
       } else {
         alert("Wrong password or email");
       }

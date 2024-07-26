@@ -54,3 +54,15 @@ textarea {
   resize: none;
 }
 
+.dropdown-button {
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.dropdown-img {
+  width: 20px;
+  height: 20px;
+  background: none;
+}
