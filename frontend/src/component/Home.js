@@ -46,28 +46,7 @@ function Home() {
   return (
     <div>
     <div className={styless.bodyy}>
-    <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 4500,
-          disableOnInteraction: false,
-        }}
-        // pagination={{
-        //   clickable: true,
-        // }}
-        // navigation={true}
-        modules={[Autoplay, Navigation]}
-        className="mySwiper"
-      >
-        <SwiperSlide><img src={img} alt="" className='imagess'/>
-        {/* <p></p> */}
-        
-        </SwiperSlide>
-        <SwiperSlide><img src={img2} alt="" className='imagess'/></SwiperSlide>
-        <SwiperSlide><img src={img3} alt="" className='imagess'/></SwiperSlide>
-        
-      </Swiper>
+ 
 </div>
 <Swiper
         effect={'coverflow'}
