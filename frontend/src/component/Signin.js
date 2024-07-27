@@ -25,7 +25,7 @@ function Signin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8083/loginDoctor', formData);
+      const response = await axios.post('https://technical-support-seven.vercel.app/loginDoctor', formData);
       const responseData = response.data;
   
       if (responseData && responseData.Message === "Logged in successfully") {
