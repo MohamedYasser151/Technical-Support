@@ -1,8 +1,8 @@
 import React, { useEffect, useState,useRef } from 'react'
 import { useNavigate ,NavLink} from 'react-router-dom'
 import stylesr from './css/Click.module.css';
-import imgPhone from './image/images.png'; // صورة للهاتف
-import imgPrinter from  './image/printer.png'; // صورة للطابعة
+import imgPhone from './image/images.png'; 
+import imgPrinter from  './image/printer.png';
 import Cookies from 'js-cookie';
 
 function Click() {
@@ -47,7 +47,7 @@ function Click() {
           username: username // إضافة username إلى البيانات المرسلة
         };
     
-        fetch('http://localhost:8083/test', {
+        fetch('https://technical-support-seven.vercel.app/test', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

@@ -42,7 +42,7 @@ function Employee() {
   const onHide = () => setModalShow(false);
 
   useEffect(() => {
-    fetch('http://localhost:8083/services')
+    fetch('https://technical-support-seven.vercel.app/services')
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data)) {
@@ -75,7 +75,7 @@ function Employee() {
 
   const handleRemove = async (id) => {
     try {
-      await axios.delete(`http://localhost:8083/removetest/${id}`);
+      await axios.delete(`https://technical-support-seven.vercel.app/removetest/${id}`);
       window.location.reload();
     } catch (err) {
       console.error("Error deleting record:", err);
