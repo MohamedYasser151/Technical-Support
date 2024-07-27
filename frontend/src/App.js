@@ -22,6 +22,7 @@ const Click = lazy(()=> import('./component/click.js'))
 const IT = lazy(()=> import('./component/it/Employee.js'))
 const  Chatbot = lazy(()=> import('./component/chatbot/chat.js'))
 const  Pages = lazy(()=> import('./component/page.js'))
+const  Department = lazy(()=> import('./component/Department.js'))
 
 
 
@@ -100,6 +101,21 @@ const App = ()=>{
           </div>
           </React.Suspense>
         }/>
+
+        {/* Department */}
+          <Route path="/Department" element={
+            <React.Suspense fallback={<Loading/>}>
+            <div>
+          {/* <Navbars /> */}
+                    
+           < Department />
+          
+          
+          {/* <Footer/> */}
+          </div>
+          </React.Suspense>
+        }/>
+
           <Route path="/IT" element={
             <React.Suspense fallback={<Loading/>}>
             <div>

@@ -3,7 +3,7 @@ import './css/Loading.css'
 function Loading() {
   return (
     <div className="loading">
-    <div className="terminal-loader">
+    {/* <div className="terminal-loader">
   <div className="terminal-header">
     <div className="terminal-title">Fashion wave</div>
     <div className="terminal-controls">
@@ -15,7 +15,8 @@ function Loading() {
   <div className="content">
     <div className="textloading">Loading...</div>
   </div>
-</div>
+</div> */}
+hello
 </div>
   )
 }

@@ -42,7 +42,7 @@ function Employee() {
   const onHide = () => setModalShow(false);
 
   useEffect(() => {
-    fetch('technical-support-seven.vercel.app/services')
+    fetch('http://localhost:8083/services')
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data)) {

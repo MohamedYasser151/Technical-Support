@@ -97,101 +97,76 @@ function Click() {
 
 
           <div className={stylesr.dropdown}>
-            <button type="button" className={stylesr.dropbtn}>
-              {selectedDepartment ? (
-                <>
-                  <div  style={{ width: '30px', height: '30px', marginRight: '10px' }} >
-                  {/* {selectedDepartment.Department} */}
-                    </div>
-                  {selectedDepartment.Department}
-                </>
-              ) : 'اختر القسم'}
-            </button>
-            <div className={stylesr.dropdownContent}>
-              <div onClick={() => handleDepartmentChange('قسم الفيروسات')}>
-                {/* <img src={imgPhone} alt="Phone" style={{ width: '30px', height: '30px', marginRight: '10px' }} /> */}
-                قسم الفيروسات
-              </div>
-              <div onClick={() => handleDepartmentChange('قسم المناعة')}>
-                {/* <img src={imgPrinter} alt="Printer" style={{ width: '30px', height: '30px', marginRight: '10px' }} /> */}
-                قسم المناعة 
-              </div>
-
-
-              <div onClick={() => handleDepartmentChange('قسم الجزيئات الحيوية')}>
-                {/* <img src={imgPrinter} alt="Printer" style={{ width: '30px', height: '30px', marginRight: '10px' }} /> */}
-                قسم الجزيئات الحيوية   
-                </div>
-              <div onClick={() => handleDepartmentChange('قسم الدرن')}>
-                {/* <img src={imgPrinter} alt="Printer" style={{ width: '30px', height: '30px', marginRight: '10px' }} /> */}
-                قسم الدرن
-                </div>
-              <div onClick={() => handleDepartmentChange('قسم الموارد البشرية')}>
-                {/* <img src={imgPrinter} alt="Printer" style={{ width: '30px', height: '30px', marginRight: '10px' }} /> */}
-                قسم الموارد البشرية
-                </div>
-
-              <div onClick={() => handleDepartmentChange('قسم المخزون ')}>
-                {/* <img src={imgPrinter} alt="Printer" style={{ width: '30px', height: '30px', marginRight: '10px' }} /> */}
-                قسم المخزون              </div>
-              <div onClick={() => handleDepartmentChange('قسم الشؤون الهندسية-الصيانة العامة')}>
-                {/* <img src={imgPrinter} alt="Printer" style={{ width: '30px', height: '30px', marginRight: '10px' }} /> */}
-                قسم الشؤون الهندسية-الصيانة العامة
-                </div>
-              <div onClick={() => handleDepartmentChange('قسم الشؤون الهندسية-صيانة طبية')}>
-                {/* <img src={imgPrinter} alt="Printer" style={{ width: '30px', height: '30px', marginRight: '10px' }} /> */}
-                قسم الشؤون الهندسية-صيانة طبية
-                </div>
-              <div onClick={() => handleDepartmentChange('قسم الصحة الاكترونيه')}>
-                {/* <img src={imgPrinter} alt="Printer" style={{ width: '30px', height: '30px', marginRight: '10px' }} /> */}
-                قسم الصحة الاكترونيه            
-                  </div>
-              <div onClick={() => handleDepartmentChange('رئيس الفنيين')}>
-                {/* <img src={imgPrinter} alt="Printer" style={{ width: '30px', height: '30px', marginRight: '10px' }} /> */}
-                رئيس الفنيين 
-              </div>
-              <div onClick={() => handleDepartmentChange('نائب مدير المختبر')}>
-                {/* <img src={imgPrinter} alt="Printer" style={{ width: '30px', height: '30px', marginRight: '10px' }} /> */}
-                نائب مدير المختبر
-              </div>
-
-
-              <div onClick={() => handleDepartmentChange('قسم الجودة')}>
-                {/* <img src={imgPrinter} alt="Printer" style={{ width: '30px', height: '30px', marginRight: '10px' }} /> */}
-                قسم الجودة
-                </div>
-              <div onClick={() => handleDepartmentChange('قسم علم امراض الدم')}>
-                {/* <img src={imgPrinter} alt="Printer" style={{ width: '30px', height: '30px', marginRight: '10px' }} /> */}
-                قسم علم امراض الدم
-                </div>
-
-
-              <div onClick={() => handleDepartmentChange('قسم علم امراض الانسجة')}>
-                {/* <img src={imgPrinter} alt="Printer" style={{ width: '30px', height: '30px', marginRight: '10px' }} /> */}
-                قسم علم امراض الانسجة  
-                            </div>
-              <div onClick={() => handleDepartmentChange('قسم الكيمياء الحيوية والهرمونات')}>
-                {/* <img src={imgPrinter} alt="Printer" style={{ width: '30px', height: '30px', marginRight: '10px' }} /> */}
-                قسم الكيمياء الحيوية والهرمونات   
-                           </div>
-              <div onClick={() => handleDepartmentChange('مدير المختبر الاقليمي')}>
-                {/* <img src={imgPrinter} alt="Printer" style={{ width: '30px', height: '30px', marginRight: '10px' }} /> */}
-                مدير المختبر الاقليمي
-              </div>
-              <div onClick={() => handleDepartmentChange('قسم الامن الصحي')}>
-                {/* <img src={imgPrinter} alt="Printer" style={{ width: '30px', height: '30px', marginRight: '10px' }} /> */}
-                قسم الامن الصحي              </div>
-              <div onClick={() => handleDepartmentChange('قسم الامن والسلامة')}>
-                {/* <img src={imgPrinter} alt="Printer" style={{ width: '30px', height: '30px', marginRight: '10px' }} /> */}
-                قسم الامن والسلامة      
-                        </div>
-              <div onClick={() => handleDepartmentChange(' قسم التدريب')}>
-                {/* <img src={imgPrinter} alt="Printer" style={{ width: '30px', height: '30px', marginRight: '10px' }} /> */}
-                قسم التدريب        
-                      </div>
-             
+      <button type="button" className={stylesr.dropbtn}>
+        {selectedDepartment ? (
+          <>
+            <div style={{ width: '30px', height: '30px', marginRight: '10px' }}>
+              {/* {selectedDepartment.Department} */}
             </div>
-          </div>
+            {selectedDepartment.Department}
+          </>
+        ) : 'اختر القسم'}
+      </button>
+      <div className={stylesr.dropdownContent}>
+        <div onClick={() => handleDepartmentChange('قسم الفيروسات')}>
+          قسم الفيروسات
+        </div>
+        <div onClick={() => handleDepartmentChange('قسم المناعة')}>
+          قسم المناعة
+        </div>
+        <div onClick={() => handleDepartmentChange('قسم الجزيئات الحيوية')}>
+          قسم الجزيئات الحيوية
+        </div>
+        <div onClick={() => handleDepartmentChange('قسم الدرن')}>
+          قسم الدرن
+        </div>
+        <div onClick={() => handleDepartmentChange('قسم الموارد البشرية')}>
+          قسم الموارد البشرية
+        </div>
+        <div onClick={() => handleDepartmentChange('قسم المخزون ')}>
+          قسم المخزون
+        </div>
+        <div onClick={() => handleDepartmentChange('قسم الشؤون الهندسية-الصيانة العامة')}>
+          قسم الشؤون الهندسية-الصيانة العامة
+        </div>
+        <div onClick={() => handleDepartmentChange('قسم الشؤون الهندسية-صيانة طبية')}>
+          قسم الشؤون الهندسية-صيانة طبية
+        </div>
+        <div onClick={() => handleDepartmentChange('قسم الصحة الاكترونيه')}>
+          قسم الصحة الاكترونيه
+        </div>
+        <div onClick={() => handleDepartmentChange('رئيس الفنيين')}>
+          رئيس الفنيين
+        </div>
+        <div onClick={() => handleDepartmentChange('نائب مدير المختبر')}>
+          نائب مدير المختبر
+        </div>
+        <div onClick={() => handleDepartmentChange('قسم الجودة')}>
+          قسم الجودة
+        </div>
+        <div onClick={() => handleDepartmentChange('قسم علم امراض الدم')}>
+          قسم علم امراض الدم
+        </div>
+        <div onClick={() => handleDepartmentChange('قسم علم امراض الانسجة')}>
+          قسم علم امراض الانسجة
+        </div>
+        <div onClick={() => handleDepartmentChange('قسم الكيمياء الحيوية والهرمونات')}>
+          قسم الكيمياء الحيوية والهرمونات
+        </div>
+        <div onClick={() => handleDepartmentChange('مدير المختبر الاقليمي')}>
+          مدير المختبر الاقليمي
+        </div>
+        <div onClick={() => handleDepartmentChange('قسم الامن الصحي')}>
+          قسم الامن الصحي
+        </div>
+        <div onClick={() => handleDepartmentChange('قسم الامن والسلامة')}>
+          قسم الامن والسلامة
+        </div>
+        <div onClick={() => handleDepartmentChange('قسم التدريب')}>
+          قسم التدريب
+        </div>
+      </div>
+    </div>
           {/* </div> */}
           
           <textarea 
