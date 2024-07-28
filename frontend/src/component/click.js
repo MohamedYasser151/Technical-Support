@@ -1,14 +1,22 @@
 import React, { useEffect, useState,useRef } from 'react'
 import { useNavigate ,NavLink} from 'react-router-dom'
 import stylesr from './css/Click.module.css';
-import imgPhone from './image/images.png'; 
+import imgPhone from './image/10.png'; 
 import imgPrinter from  './image/printer.png';
+import img from  './image/8.png';
+import img1 from  './image/9.png';
+import img2 from  './image/10.png';
+import img3 from  './image/11.png';
 import Cookies from 'js-cookie';
+import { useTranslation } from 'react-i18next';
 
 function Click() {
+  
+
     const [selectedDevice, setSelectedDevice] = useState(null);
     const [selectedDepartment, setSelectedDepartment] = useState(null);
     const [report, setReport] = useState('');
+    const { t, i18n } = useTranslation();
   
     const handleDepartmentChange = (Department) => {
       setSelectedDepartment({ Department});
@@ -37,14 +45,14 @@ function Click() {
     const handleSubmit = (e) => {
         e.preventDefault();
         
-        const username = Cookies.get('username'); // الحصول على قيمة username من الكوكيز
+        const username = Cookies.get('username'); 
     
         const data = {
           device: selectedDevice.device,
           image: selectedDevice.image,
           Department: selectedDepartment.Department,
           report: report,
-          username: username // إضافة username إلى البيانات المرسلة
+          username: username 
         };
     
         fetch('https://technical-support-seven.vercel.app/test', {
@@ -80,7 +88,7 @@ function Click() {
                   <img src={selectedDevice.image} alt={selectedDevice.device} style={{ width: '30px', height: '30px', marginRight: '10px' }} />
                   {selectedDevice.device}
                 </>
-              ) : 'اختر جهاز'}
+              ) : t('اختر الجهاز')}
             </button>
             <div className={stylesr.dropdownContent}>
               <div onClick={() => handleDeviceChange('هاتف', imgPhone)}>
@@ -90,6 +98,18 @@ function Click() {
               <div onClick={() => handleDeviceChange('طابعة ', imgPrinter)}>
                 <img src={imgPrinter} alt="طابعة" style={{ width: '30px', height: '30px', marginRight: '10px' }} />
                 طابعة 
+              </div>
+              <div onClick={() => handleDeviceChange('كمبيوتر', imgPrinter)}>
+                <img src={img3} alt="كمبيوتر" style={{ width: '30px', height: '30px', marginRight: '10px' }} />
+                كمبيوتر 
+              </div>
+              <div onClick={() => handleDeviceChange('الاجهزه الطبيه', imgPrinter)}>
+                <img src={img1} alt="الاجهزه الطبيه" style={{ width: '30px', height: '30px', marginRight: '10px' }} />
+                الاجهزه الطبيه 
+              </div>
+              <div onClick={() => handleDeviceChange('الشبكه', imgPrinter)}>
+                <img src={img} alt="" style={{ width: '30px', height: '30px', marginRight: '10px' }} />
+                الشبكه
               </div>
             </div>
           </div>
@@ -105,7 +125,7 @@ function Click() {
             </div>
             {selectedDepartment.Department}
           </>
-        ) : 'اختر القسم'}
+        ) : t('اختر القسم')}
       </button>
       <div className={stylesr.dropdownContent}>
         <div onClick={() => handleDepartmentChange('قسم الفيروسات')}>
@@ -172,12 +192,12 @@ function Click() {
           <textarea 
             value={report}
             onChange={handleReportChange}
-            placeholder="اكتب التقرير هنا..." 
+            placeholder={t("اكتب التقرير هنا" )}
             style={{ width: '100%', height: '150px', padding: '10px', fontSize: '16px', borderRadius: '5px' }} 
           />
           
           
-          <button type="submit" className={stylesr.btn}>click</button>
+          <button type="submit" className={stylesr.btn}>{t("ارسال")}</button>
         </form>
       </div>
     );

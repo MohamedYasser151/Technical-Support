@@ -6,8 +6,11 @@ import img4 from './image/left2.png';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import styles from "./css/signup.module.css";
+import { useTranslation } from 'react-i18next';
 
 function Signin() {
+  const { t, i18n } = useTranslation();
+
   const [login, setLogin] = useState(false);
   const [formData, setData] = useState({
     username: "",
@@ -68,7 +71,7 @@ function Signin() {
           <img src={img2} alt="" />
           <img src={img4} alt="" className={imageMoved ? styles.moved : ''} style={{ boxShadow: "none", width: "23px", height: "23px", position: "relative", right: "60px", top: "60px" }} />
         </span>
-        <h1>Login </h1>
+        <h1>{t("تسجيل الدخول")} </h1>
         <div>
           {login ? (
             navigate("/home")
@@ -78,7 +81,7 @@ function Signin() {
                 <div className={styles.inp}>
                   <input
                     type="username"
-                    placeholder="username"
+                    placeholder={t("اسم المستخدم")}
                     name="username"
                     required
                     value={formData.username}
@@ -86,7 +89,7 @@ function Signin() {
                   />
                   <input
                     type="password"
-                    placeholder="Password"
+                    placeholder={t("كلمة السر")}
                     name="password"
                     required
                     value={formData.password}
@@ -96,7 +99,7 @@ function Signin() {
                   />
                 </div>
                 <div className={styles.btn}>
-                  <button type="submit" name="submit">Login</button>
+                  <button type="submit" name="submit">{t("تسجيل الدخول")}</button>
                 </div>
               </form>
             

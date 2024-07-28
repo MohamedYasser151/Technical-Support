@@ -5,7 +5,18 @@
 .bodyy{
     width: 100%;
     height: 100vh;
-    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.bodyy p{
+    font-family: Arial, sans-serif;
+    max-width: 600px; 
+    /* margin: 0 auto;  */
+    line-height: 1.6; 
+    text-align: justify; 
+    padding: 10px; 
+
 }
 .bodybac{
     /* background-image: url(../image/imagets/home.jpg); */

@@ -17,8 +17,12 @@ import 'swiper/css/navigation';
 import './css/styles.css';
 import { Autoplay, Pagination, Navigation ,EffectCoverflow} from 'swiper/modules';
 import { NavLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
-function page() {
+
+function Page() {
+  const { t, i18n } = useTranslation();
+
   return (
     <div className={styless.bodyy}>
      <Swiper
@@ -39,14 +43,14 @@ function page() {
             
             <img src={img} alt="" className='imagess'/>
        
-         <NavLink to="/home" className='btnhome' style={{position:"absolute",display:"flex"}}>Home Page</NavLink>
+         <NavLink to="/home" className='btnhome' style={{position:"absolute",display:"flex"}}>{t("الرئيسية")}</NavLink>
         
         </SwiperSlide>
         <SwiperSlide><img src={img2} alt="" className='imagess'/>
-        <NavLink to="/home" className='btnhome' style={{position:"absolute",display:"flex"}}>Home Page</NavLink>
+        <NavLink to="/home" className='btnhome' style={{position:"absolute",display:"flex"}}>{t("الرئيسية")}</NavLink>
         </SwiperSlide>
         <SwiperSlide><img src={img3} alt="" className='imagess'/>
-        <NavLink to="/home" className='btnhome' style={{position:"absolute",display:"flex"}}>Home Page</NavLink>
+        <NavLink to="/home" className='btnhome' style={{position:"absolute",display:"flex"}}>{t("الرئيسية")}</NavLink>
         </SwiperSlide>
         
       </Swiper>
@@ -54,4 +58,4 @@ function page() {
   )
 }
 
-export default page
+export default Page

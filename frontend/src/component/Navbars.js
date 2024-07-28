@@ -5,7 +5,7 @@ import {NavLink,useNavigate } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import Cookies from 'js-cookie';
 import './css/Navbars.css';
-import Img from './image/icon.png'
+import Img from './image/icon2.png'
 import Img1 from './image/earth.png'
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
@@ -13,10 +13,7 @@ const  Navbars = ({size}) => {
   const [login, setLogin] = useState(false);
   const [filter ,setFilter] = useState('');
   const navigator = useNavigate ()
-  const change = (event) =>{
-    setFilter(event.target.value);
-  } 
-
+  
 
 
   
@@ -29,35 +26,6 @@ const changeFr = () =>{
     i18n.changeLanguage('ar')
 }
 
-  const handleClick = (e) =>{
-    e.preventDefault();
-    const lowercase = filter.toLowerCase();
-    if(lowercase  === "product"){
-      navigator("/product");
-    }
-    else if(lowercase  === "home"){
-      navigator("/home");
-    }
-    else if(lowercase  === "support"){
-      navigator("/support");
-    }
-    else if(lowercase  === "add to cart"){
-      navigator("/cartitem");
-    }
-    else if(lowercase  === "men"){
-      navigator("/productMen");
-    }
-    else if(lowercase  === "women"){
-      navigator("/productWomen");
-    }
-    else if(lowercase  === "kids"){
-      navigator("/productKids");
-    }
-    else{
-      navigator('*')
-    }
-    
-  }
 
   const handleRemove = () =>{
     Cookies.remove("login");
@@ -70,7 +38,7 @@ const changeFr = () =>{
     
     <Navbar expand="lg" className=" navbar navbar-dark ">
       <Container fluid>
-        <NavLink to="/home">
+        <NavLink to="/">
         <Navbar.Brand  className='icon' >
         <img
               alt=""
@@ -84,16 +52,19 @@ const changeFr = () =>{
         <Navbar.Toggle aria-controls="navbarScroll " className="Toggle"  />
         <Navbar.Collapse id="navbarScroll ">
           <Nav className="mr-auto  mx-auto my-lg-0 " style={{ maxHeight: '100px'}} navbarScroll>
-            <NavLink to="/" className="NavLink"  >{t("Home")}</NavLink>
+            <NavLink to="/home" className="NavLink"  >{t("الرئيسية")}</NavLink>
            
-            <NavLink to="/chatbot" className="NavLink">
-            {t("Support")}
-            </NavLink>
+          
             <NavLink to="/Reports" className="NavLink">
-            {t("Reports")}
+            {t("التقرير")}
             </NavLink>
-            
-            <NavLink  className="NavLink" onClick={handleRemove}>{t("Log out")}</NavLink>
+            <NavLink to="/Department" className="NavLink">
+            {t("الاقسام")}
+            </NavLink>
+            <NavLink to="/chatbot" className="NavLink">
+            {t("الدعم")}
+            </NavLink>
+            <NavLink  className="NavLink" onClick={handleRemove}>{t("تسجيل خروج")}</NavLink>
             <DropdownButton
       id="dropdown-item-button"
       title={<img src={Img1} alt="Dropdown" className="dropdown-img" />}
@@ -109,16 +80,7 @@ const changeFr = () =>{
             {/* <NavLink className="NavLink" onClick={changeFr}>{t("Arabic")}</NavLink>
             <NavLink className="NavLink" onClick={changeEn}>{t("English")}</NavLink> */}
           </Nav>
-          {/* <Form className="d-flex" onSubmit={handleClick}>
-            <Form.Control
-              type="search"
-              placeholder={t("Search")}
-              className="me-2 search"
-              aria-label="Search"
-              onChange={change}
-            />
-            <Button variant="outline-light" type='submit'>{t("Search")}</Button>
-          </Form> */}
+         
         </Navbar.Collapse>
       </Container>
     </Navbar>

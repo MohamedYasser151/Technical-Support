@@ -4,8 +4,8 @@
     align-items: center;
     justify-content: center;
     padding: 10px;
-  background:  green;
-  color:#fff ;
+    background:  rgba(27, 128, 244, 0.697);
+    color:#fff ;
   border: none;
   border-radius: 10px;
   margin-top: 50px;
@@ -15,6 +15,6 @@
     text-decoration: none;
   }
   .btnhome:hover{
-  background:  rgba(228, 116, 5, 0.937);
+    background:  rgba(27, 128, 244, 0.991);
   
   }
