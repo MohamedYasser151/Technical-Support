@@ -63,7 +63,7 @@
   text-decoration: none;
 }
 @media(max-width:836px){
-    .bodybac{
-        background-position: center;
+    .bodyy{
+       flex-direction: column;
     }
 }

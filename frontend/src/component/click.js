@@ -99,15 +99,15 @@ function Click() {
                 <img src={imgPrinter} alt="طابعة" style={{ width: '30px', height: '30px', marginRight: '10px' }} />
                 طابعة 
               </div>
-              <div onClick={() => handleDeviceChange('كمبيوتر', imgPrinter)}>
+              <div onClick={() => handleDeviceChange('كمبيوتر', img3)}>
                 <img src={img3} alt="كمبيوتر" style={{ width: '30px', height: '30px', marginRight: '10px' }} />
                 كمبيوتر 
               </div>
-              <div onClick={() => handleDeviceChange('الاجهزه الطبيه', imgPrinter)}>
+              <div onClick={() => handleDeviceChange('الاجهزه الطبيه', img1)}>
                 <img src={img1} alt="الاجهزه الطبيه" style={{ width: '30px', height: '30px', marginRight: '10px' }} />
                 الاجهزه الطبيه 
               </div>
-              <div onClick={() => handleDeviceChange('الشبكه', imgPrinter)}>
+              <div onClick={() => handleDeviceChange('الشبكه', img)}>
                 <img src={img} alt="" style={{ width: '30px', height: '30px', marginRight: '10px' }} />
                 الشبكه
               </div>
