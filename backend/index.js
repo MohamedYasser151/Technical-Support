@@ -4,6 +4,8 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const bodyParser= require('body-parser');
 const bcrypt = require('bcrypt');
+const { format } = require('date-fns');
+
 const app = express();
 app.use(cors());
 
@@ -136,19 +138,19 @@ app.post("/loginDoctor", (req, res) => {
 });
 
 app.post('/test', (req, res) => {
-  const { device, image, report ,username,Department} = req.body;
+  const { device, image, report, username, Department, date } = req.body;
+  const formattedDate = format(new Date(date), 'yyyy-MM-dd HH:mm:ss');
 
-  const sql = "INSERT INTO reporting (images, nameimages, textarea,namedoctor,Department) VALUES (?, ?, ?,?,?)";
-  db.query(sql, [image, device, report,username,Department], (err, result) => {
+  const sql = "INSERT INTO reporting (images, nameimages, textarea, namedoctor, Department, report_date) VALUES (?, ?, ?, ?, ?, ?)";
+  db.query(sql, [image, device, report, username, Department, formattedDate], (err, result) => {
     if (err) {
       console.error('Error inserting data:', err);
-      res.status(500).json({ message: 'Error inserting data', error: err.message }); // عرض تفاصيل الخطأ
+      res.status(500).json({ message: 'Error inserting data', error: err.message });
       return;
     }
     res.json({ message: 'Data received and inserted successfully' });
   });
 });
-
 
 app.get('/services',(req,res)=>{
   const sql = "SELECT *  FROM reporting";

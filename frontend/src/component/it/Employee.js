@@ -87,6 +87,14 @@ function Employee() {
     setModalShow(true);
   };
 
+  // date
+
+  const formatDate = (dateString) => {
+    const options = { year: 'numeric', month: 'long', day: 'numeric',hour: '2-digit', minute: '2-digit', second: '2-digit'  };
+    return new Date(dateString).toLocaleDateString(undefined, options);
+  };
+  
+
   return (
     <>
       <div className={styleess.nav}>
@@ -107,6 +115,7 @@ function Employee() {
                 <th>Device type</th>
                 <th>Device image</th>
                 <th>Reports</th>
+                <th>Date</th>
                 <th>Delete</th>
               </tr>
             </thead>
@@ -129,6 +138,9 @@ function Employee() {
                         >
                            Report
                         </Button>
+                      </td>
+                      <td>
+                      {formatDate(item.report_date)}
                       </td>
                       <td>
                         <Button onClick={() => handleRemove(item.id)}>Delete</Button>

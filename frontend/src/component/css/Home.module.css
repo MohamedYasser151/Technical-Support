@@ -16,7 +16,7 @@
     line-height: 1.6; 
     text-align: justify; 
     padding: 10px; 
-
+  color: #fff;
 }
 .bodybac{
     /* background-image: url(../image/imagets/home.jpg); */
@@ -62,8 +62,61 @@
 .NavLink{
   text-decoration: none;
 }
+
+.videoBackground{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.testv{
+    width: 43%;
+    position: absolute;
+    margin-bottom: 15px;
+}
+
+.Tv{
+    display: flex;
+    width: 100%;
+    height: 130vh;
+    align-items: center;
+    justify-content: center;
+}
+.Tv .buttonn{
+    position: absolute;  
+    width: 43%;
+    background: transparent;
+    border: none;
+}
+.Tv .buttonn img{
+    width: 30px;
+}
+.Tv img{
+    width: 50%;
+}
 @media(max-width:836px){
     .bodyy{
        flex-direction: column;
+    }
+    .bodyy img{
+        margin-top: 100px;
+    }
+}
+@media(max-width:601px){
+    .testv{
+        width: 78%;
+        position: absolute;
+        margin-bottom: 10px;
+    }
+    .Tv{
+    height: 100vh;
+
+    }
+    .Tv img{
+        width: 90%;
+
     }
 }

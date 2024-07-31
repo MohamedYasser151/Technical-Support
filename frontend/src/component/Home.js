@@ -12,8 +12,8 @@ import styless from "./css/Home.module.css"
 
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import img from './image/1.jpg'
-import img2 from './image/2.jpg'
+import img from './image/TV.png'
+import img2 from './image/fullscreen.png'
 import img3 from './image/3.jpg'
 import img4 from './image/homep.jpg'
 
@@ -38,6 +38,8 @@ import 'swiper/css/navigation';
 
 import './css/styles.css';
 
+import back from './video/1.mp4'
+// import back1 from './video/2.mp4'
 // import required modules
 import { Autoplay, Pagination, Navigation ,EffectCoverflow} from 'swiper/modules';
 
@@ -58,24 +60,48 @@ function Home() {
   //     navigate('/signin');
   //   }
   // }, [navigate]);
+
+  const videoRef = useRef(null);
+
+
+  const handleFullscreen = () => {
+    if (videoRef.current.requestFullscreen) {
+      videoRef.current.requestFullscreen();
+    } else if (videoRef.current.webkitRequestFullscreen) { 
+      videoRef.current.webkitRequestFullscreen();
+    } else if (videoRef.current.msRequestFullscreen) { 
+      videoRef.current.msRequestFullscreen();
+    }
+  };
+
+ 
   return (
     <div>
     <div className={styless.bodyy}>
- <img src={img4} alt="" />
+    <video className={styless.videoBackground} autoPlay muted loop>
+        <source src={back} type="video/mp4" />
+      </video>
+ <img src={img4} alt="" data-aos="fade-left"/>
 
-      <p>
+      <p data-aos="fade-right">
 
-      نبذة عن:
-المختبر الإقليمي بجازان،دشن صاحب السمو الملكي الأمير محمد بن عبدالعزيز بن محمد بن عبدالعزيز نائب أمير منطقة جازان  افتتاح المختبر الإقليمي، بمشاركة معالي وزير الصحة الدكتور الدكتور توفيق بن فوزان الربيعة ومدير الشؤون الصحية في المنطقة عبدالرحمن بن دبى الحربي في عام ٢٠٢٠ م. 
-
-المختبر الإقليمي في منطقة جازان الذي يعد أحد المشاريع الصحية التخصصية بالمنطقة ، ويقدم الخدمات المخبرية التخصصية ، بما يضمه من الكوادر الطبية والإدارية المتخصصة في عدد من المجالات.
-المختبر الإقليمي ، الذي يسهم في فحوصات عينات فيروس كورونا المستجد (كوفيدـ19) بالمنطقة ويأتي امتداداً للدعم والرعاية التي يوليها خادم الحرمين الشريفين الملك سلمان بن عبدالعزيز آل سعود وسمو ولي عهده الأمين ـ حفظهما الله ـ بالمواطن والمقيم في مختلف مناطق المملكة, مثمناً متابعة معالي وزير الصحة والجهود التي يبذلها مدير عام صحة جازان وكافة أبطال الصحة بالمنطقة لكل ما يخدم المستفيدين من القطاع الصحي بشكل عام 
-الاعتمادات :
-حقق المختبر الإقليمي بمنطقة جازان معايير الجودة وحصل على شهادة اعتماد من قبل المركز السعودي لإعتماد المنشآت الصحية (CBAHI)عام ٢٠٢٣م.
-وحقق ايضاً إجتياز معايير الهيئة العامة للغذاء والدواء بالمملكة العربية السعوديه (SFDA)في عام ٢٠٢٣م .
-
+{t(" 2023 في عام (SFDA)عام2023.وحقق ايضاً إجتياز معايير الهيئة العامة للغذاء والدواء بالمملكة العربية السعوديه (CBAHI)نبذة عن:المختبر الإقليمي بجازان،دشن صاحب السمو الملكي الأمير محمد بن عبدالعزيز بن محمد بن عبدالعزيز نائب أمير منطقة جازان  افتتاح المختبر الإقليمي، بمشاركة معالي وزير الصحة الدكتور الدكتور توفيق بن فوزان الربيعة ومدير الشؤون الصحية في المنطقة عبدالرحمن بن دبى الحربي في عام 2020م.المختبر الإقليمي في منطقة جازان الذي يعد أحد المشاريع الصحية التخصصية بالمنطقة ، ويقدم الخدمات المخبرية التخصصية ، بما يضمه من الكوادر الطبية والإدارية المتخصصة في عدد من المجالات.المختبر الإقليمي ، الذي يسهم في فحوصات عينات فيروس كورونا المستجد (كوفيدـ19) بالمنطقة ويأتي امتداداً للدعم والرعاية التي يوليها خادم الحرمين الشريفين الملك سلمان بن عبدالعزيز آل سعود وسمو ولي عهده الأمين ـ حفظهما الله ـ بالمواطن والمقيم في مختلف مناطق المملكة, مثمناً متابعة معالي وزير الصحة والجهود التي يبذلها مدير عام صحة جازان وكافة أبطال الصحة بالمنطقة لكل ما يخدم المستفيدين من القطاع الصحي بشكل عام الاعتمادات :حقق المختبر الإقليمي بمنطقة جازان معايير الجودة وحصل على شهادة اعتماد من قبل المركز السعودي لإعتماد المنشآت الصحية")}
       </p>
 </div>
+
+<div className={styless.Tv} data-aos="fade-down">
+<img src={img} alt="" />
+{/* <video className={styless.testv} ref={videoRef} autoPlay muted loop>
+        <source src={back1} type="video/mp4" />
+
+      </video> */}
+      {/* <button className={styless.buttonn} onClick={handleFullscreen}>
+        <img src={img2} alt="" />
+      </button> */}
+
+      
+</div>
+
 <Swiper
         effect={'coverflow'}
         grabCursor={true}

@@ -52,7 +52,8 @@ function Click() {
           image: selectedDevice.image,
           Department: selectedDepartment.Department,
           report: report,
-          username: username 
+          username: username,
+          date: new Date().toISOString()
         };
     
         fetch('https://technical-support-seven.vercel.app/test', {
@@ -80,7 +81,7 @@ function Click() {
     
     <div className={stylesr.allclick} style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100vh", flexDirection: "column", }}>
         <form className={stylesr.arddds} onSubmit={handleSubmit}>
-          {/* <div className={stylesr.flexx}> */}
+          <div className={stylesr.flexx}>
           <div className={stylesr.dropdown}>
             <button type="button" className={stylesr.dropbtn}>
               {selectedDevice ? (
@@ -187,13 +188,13 @@ function Click() {
         </div>
       </div>
     </div>
-          {/* </div> */}
+          </div>
           
           <textarea 
             value={report}
             onChange={handleReportChange}
             placeholder={t("اكتب التقرير هنا" )}
-            style={{ width: '100%', height: '150px', padding: '10px', fontSize: '16px', borderRadius: '5px' }} 
+            className={stylesr.textareaa} 
           />
           
           

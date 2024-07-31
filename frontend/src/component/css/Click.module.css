@@ -1,14 +1,22 @@
 .allclick{
-  background-image: url(../image/office-2609180.jpg);
+  /* background-image: url(../image/office-2609180.jpg); */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background: #f1f1f1;
 }
 .arddds {
   width: 80%;
     position: relative;
-    backdrop-filter: blur(8px);
+    /* backdrop-filter: blur(8px); */
     border-radius: 30px;
+    background: #ffff;
+    background-image: url(../image/15.jpg);
+    background-position:right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
   }
   .flexx{
     display: flex;
@@ -26,7 +34,7 @@
   .dropbtn {
     width: 200px;
     height: 100px;
-    background-color: #f8af05;
+    background-color: rgba(27, 128, 244, 0.697);
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -69,14 +77,46 @@
   }
   
   .dropdown:hover .dropbtn {
-    background-color: #e6a100;
+    background-color: rgba(27, 128, 244, 0.697);
 
   }
   .btn{
-    background-color: rgb(235, 177, 17);
+    background-color: rgba(27, 128, 244, 0.697);
     width: 30%;
     margin: 10px;
     border: none;
     color: #ffff;
     border-radius: 10px;
+  }
+  .textareaa{
+    width: 50%;
+     height: 150px;
+      padding: 10px;
+       font-Size: 16px;
+        border-radius: 5px;
+        margin-left: 10px;
+  }
+  @media(max-width:991px){
+   .arddds{
+    width: 90%;
+    align-items: center;
+   }
+    .textareaa{
+      width: 90%;
+    }
+   .dropbtn{
+    width: 150px;
+    height: 60px;
+    font-size: 15px;
+   }
+   .btn{
+    width: 80%;
+   }
+  }
+  @media(max-width:342px){
+    .dropbtn{
+    width: 80px;
+    font-size: 11px;
+
+    }
   }

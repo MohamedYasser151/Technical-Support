@@ -64,6 +64,7 @@ function Signin() {
   };
 
   return (
+    <>
     <div className={styles.container}>
       <div className={styles.signbox}>
         <span className={styles.iconimage}>
@@ -107,7 +108,20 @@ function Signin() {
           )}
         </div>
       </div>
+      
     </div>
+    <NavLink className="btnlink" to="/home">
+<button>
+    
+    <span class="circle1"></span>
+    <span class="circle2"></span>
+    <span class="circle3"></span>
+    <span class="circle4"></span>
+    <span class="circle5"></span>
+    <span class="text">{t("الرئيسية")}</span>
+</button>
+</NavLink>
+    </>
   );
 }
 

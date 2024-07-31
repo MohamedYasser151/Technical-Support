@@ -84,7 +84,7 @@ const App = ()=>{
            < Home />
           
           
-          <Footer/>
+          {/* <Footer/> */}
           </div>
           </React.Suspense>
         }/>

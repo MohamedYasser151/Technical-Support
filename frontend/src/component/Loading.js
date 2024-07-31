@@ -2,22 +2,19 @@ import React from 'react'
 import './css/Loading.css'
 function Loading() {
   return (
-    <div className="loading">
-    {/* <div className="terminal-loader">
-  <div className="terminal-header">
-    <div className="terminal-title">Fashion wave</div>
-    <div className="terminal-controls">
-      <div className="control close"></div>
-      <div className="control minimize"></div>
-      <div className="control maximize"></div>
+    
+   <div class="loader">
+  <div class="panWrapper">
+    <div class="pan">
+      <div class="food"></div>
+      <div class="panBase"></div>
+      <div class="panHandle"></div>
     </div>
+    <div class="panShadow"></div>
   </div>
-  <div className="content">
-    <div className="textloading">Loading...</div>
-  </div>
-</div> */}
-hello
 </div>
+
+
   )
 }
 
