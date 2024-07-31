@@ -116,7 +116,7 @@ function Employee() {
                 <th>Device image</th>
                 <th>Reports</th>
                 <th>Date</th>
-                <th>Delete</th>
+                {/* <th>Delete</th> */}
               </tr>
             </thead>
             <tbody>
@@ -143,7 +143,7 @@ function Employee() {
                       {formatDate(item.report_date)}
                       </td>
                       <td>
-                        <Button onClick={() => handleRemove(item.id)}>Delete</Button>
+                        {/* <Button onClick={() => handleRemove(item.id)}>Delete</Button> */}
                       </td>
                     </tr>
                   ))}
