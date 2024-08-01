@@ -4,6 +4,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 150px;
+    
 }
 
 ::-webkit-scrollbar {
@@ -16,20 +18,21 @@
     height: 450px;
     box-shadow: 0 0 2px #fff;
     border-radius: 10px;
-    background: #f1f1f1;
+    /* background: #f1f1f1; */
     max-height: 450px; 
     overflow-y: auto; 
+    background: #7f03f362;
     
 }
 .header{
     width: 100%;
     height: 60px;
-    background: #fff;
+    background: #4B53A6;
     border-radius:10px  10px  0 0 ;
     display: flex;
     align-items: center;
     justify-content:start;
-    color: #4B53A6;
+    color: #fff;
 }
 .header img{
     width: 50px;
@@ -39,9 +42,9 @@
     width: 120px;
     height: 50px;
     border: 1px solid #4B53A6;
-    background: #fff;
+    background: #4B53A6;
     border-radius: 10px;
-    color: #4B53A6;
+    color: #fff;
     font-size: 11px;
     margin: 10px;
 }
@@ -58,15 +61,16 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    
 }
 .conversation span{
   
     width: 85%;
-    background: #fff;
+    background: #4B53A6;
     margin: 10px;
     border-radius: 4px 11px 11px 11px;
     font-size: 13px;
-    color: #4B53A6;
+    color: #fff;
    padding: 5px;
 
 }
@@ -97,7 +101,7 @@
 .conversation .user{
     width: 85%;
    padding: 5px;
-    background: #007bff;
+    background: #4B53A6;
     margin: 3px;
     border-radius:  11px 4px 11px 11px ;
     /* font-size: 13px; */

@@ -8,6 +8,11 @@ import Cookies from 'js-cookie';
 
 import style from './chatbot.module.css';
 
+// home
+import styless from "../css/Home.module.css"
+
+import back from '../video/1.mp4'
+
 function Chat() {
   const { t } = useTranslation(); 
   const navigate = useNavigate();
@@ -23,22 +28,22 @@ function Chat() {
 
   const handleUserInput = (choice) => {
     switch (choice) {
-      case t("How to contact"): 
+      case t("كيف تستخدم الموقع؟"): 
         setConversation([
           ...conversation,
-          { user: t("How to contact"), bot: t("You can contact through social media platforms")},
+          { user: t("كيف تستخدم الموقع؟"), bot: t("موقع الدعم التقني, تم إنشاؤه لي يسهل على موظفين المختبر الإقليمي التواصل مع القسم التقني بسهولة وسرعة حيث انه يمكن للمستخدم لدخول على صفحة التقارير واختيار القسم والجهاز وتحديد مشكلة الجهاز وسيتم الرد والتواصل من قبل الفريق التقني.")},
         ]);
         break;
-      case t("Return and refund policy?"): 
+      case t("عن المختبر؟"): 
         setConversation([
           ...conversation,
-          { user: t("Return and refund policy?"), bot: t("The return must be made within 14 days, and the product must be in good condition.")},
+          { user: t("عن المختبر؟"), bot: t("المختبر الإقليمي بمنطقة جازان يستقبل عينات من جميع مستشفيات المنطقة يعد احد المشاريع الصحية التخصصيةبالمنطقة ويسهم في فحوصات عينات فيروس كورونا المستجد")},
         ]);
         break;
-        case t("How can I purchase the product?"):
+        case t("عن تقنية المعلومات؟"):
             setConversation([
                 ...conversation,
-                {user:t("How can I purchase the product?"),bot:t("You can purchase the product by adding it to the cart or buying it individually. You will be contacted after the purchase process.")}
+                {user:t("عن تقنية المعلومات؟"),bot:t("يستقبل قسم تقنية المعلومات التقارير من جمع الاقسام المتواجدة في المختبر الاقليمي،ويقومون بالرد عليهم في اسرع وقت ممكن")}
             ])
             break;
       default:
@@ -51,10 +56,13 @@ function Chat() {
 
   return (
     <div className={style.allchat}>
+      <video className={styless.videoBackground} autoPlay muted loop>
+        <source src={back} type="video/mp4" />
+      </video>
       <div className={style.cardchat}>
         <div className={style.header}>
           <img src={img1} alt="" />
-          <strong>{t("Support Bot")}</strong>
+          <strong>{t("الدعم")}</strong>
         </div>
         <div className={style.conversation}>
         <p>
@@ -62,7 +70,7 @@ function Chat() {
               <img src={img2} alt="" />
               {/* <strong>Support Bot</strong> */}
                 </div>
-                <span>{t("Hello! How can I help you?")}</span>
+                <span>{t("كيف يمكنني مساعدتك؟")}</span>
 
               </p>
           {conversation.map((item, index) => (
@@ -82,9 +90,9 @@ function Chat() {
            
         </div>
         <div className={style.choices}>
-          <button onClick={() => handleUserInput(t("Return and refund policy?"))}>{t("Return and refund policy?")}</button>
-          <button onClick={()=>handleUserInput(t("How can I purchase the product?"))}>{t("How can I purchase the product?")}</button>
-          <button onClick={() => handleUserInput(t("How to contact"))}>{t("How to contact")}</button>
+          <button onClick={() => handleUserInput(t("كيف تستخدم الموقع؟"))}>{t("كيف تستخدم الموقع؟")}</button>
+          <button onClick={()=>handleUserInput(t("عن المختبر؟"))}>{t("عن المختبر؟")}</button>
+          <button onClick={() => handleUserInput(t("عن تقنية المعلومات؟"))}>{t("عن تقنية المعلومات؟")}</button>
         </div>
       </div>
     </div>
