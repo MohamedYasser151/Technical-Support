@@ -137,6 +137,21 @@ app.post("/loginDoctor", (req, res) => {
   });
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 app.post('/test', (req, res) => {
   const { device, image, report, username, Department, date } = req.body;
   const formattedDate = format(new Date(date), 'yyyy-MM-dd HH:mm:ss');

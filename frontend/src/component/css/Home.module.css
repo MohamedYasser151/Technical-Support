@@ -10,6 +10,16 @@
     justify-content: space-around;
     margin-top: 150px;
 }
+/* page */
+.bodyyy{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+/*/ page */
+
 .bodyy p{
     font-family: Arial, sans-serif;
     max-width: 730px; 

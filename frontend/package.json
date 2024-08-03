@@ -12,6 +12,7 @@
     "@mui/icons-material": "^5.14.18",
     "@mui/material": "^5.14.18",
     "@mui/styled-engine-sc": "^6.0.0-alpha.6",
+    "@pdf-lib/fontkit": "^1.1.1",
     "@tensorflow-models/speech-commands": "^0.5.4",
     "@tensorflow/tfjs": "^4.17.0",
     "@testing-library/jest-dom": "^5.17.0",
@@ -32,6 +33,8 @@
     "cors": "^2.8.5",
     "dialogflow": "^1.2.0",
     "express": "^4.18.2",
+    "file-saver": "^2.0.5",
+    "fontkit": "^2.0.2",
     "framer-motion": "^10.16.16",
     "gsap": "^3.12.4",
     "http-proxy-middleware": "^2.0.6",
@@ -45,6 +48,8 @@
     "mongoose": "^8.0.1",
     "mysql": "^2.18.1",
     "nodemon": "^3.0.1",
+    "pdf-lib": "^1.17.1",
+    "pdfmake": "^0.2.10",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.1",
     "react-bootstrap-icons": "^1.10.3",
@@ -96,8 +101,9 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.23.3",
-    "@babel/preset-react": "^7.23.3",
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.3",
+    "@babel/preset-react": "^7.24.7",
     "babel-loader": "^9.1.3",
     "concurrently": "^8.2.2",
     "gh-pages": "^6.1.1"

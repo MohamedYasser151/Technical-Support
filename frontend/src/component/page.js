@@ -24,7 +24,7 @@ function Page() {
   const { t, i18n } = useTranslation();
 
   return (
-    <div className={styless.bodyy}>
+    <div className={styless.bodyyy}>
      <Swiper
         spaceBetween={30}
         centeredSlides={true}
